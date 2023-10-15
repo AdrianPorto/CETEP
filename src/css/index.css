@@ -127,6 +127,7 @@ header {
 header {
   background-size: 100%;
   background-image: url(../../src/img/back1.jpg);
+  background-repeat: no-repeat;
 }
 
 header > .interface {
@@ -342,6 +343,9 @@ section.sobre .flex {
   cursor: pointer;
   margin: 0 5px;
   transition: 0.2s;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 /* ESTILO DO PORTFÓLIO */
