@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- FIM GOOGLE FONTES -->
+    <!-- BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- FIM BOOTSTRAP ICONS -->
+    <link rel="stylesheet" href="src/css/index.css">
+
+    <script src="src/js/script.js" defer></script>
+
+    <title>Site Giordania</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="interface">
+            <div class="logo">
+                <a href="#">
+                    <img src="src/img/logo.png" id="logoimg" alt="Logo da Agência BRN">
+                </a>
+            </div><!--logo-->
+
+            <nav class="menu-desktop">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="./estagio.html">Estágio</a></li>
+                    <li>
+                        <div style="font-size: 20px; cursor: pointer;" id="openMenu">
+                            Cursos
+                            <i style="margin-left: 10px; transform: rotate(240deg);" class="bi bi-caret-down-fill"
+                                id="arrow"></i>
+                        </div>
+                    </li>
+
+                    <div id="menu-cursos">
+                        <a href="./cursos/administracao.html">
+                            <li>
+                                TÉCNICO EM ADMINISTRAÇÃO
+                            </li>
+                        </a>
+                        <a href="./cursos/agronegocio.html">
+                            <li>
+                                TÉCNICO EM AGRONEGÓCIO
+                            </li>
+                        </a>
+                        <a href="./cursos/informatica.html">
+                            <li>
+                                TÉCNICO EM INFORMÁTICA
+                            </li>
+                        </a>
+                        <a href="./cursos/recursoshumanos.html">
+                            <li>
+                                TÉCNICO EM RECURSOS HUMANOS
+                            </li>
+                        </a>
+
+                    </div>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="btn-contato">
+                <a href="/login.html" id="a-button">
+                    <div>
+                        Logar
+                    </div>
+                </a>
+            </div><!--btn-contato-->
+
+            <div class="btn-abrir-menu" id="btn-menu">
+                <i class="bi bi-list"></i>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Aluno</a></li>
+                        <li><a href="#">Estagio</a></li>
+
+                    </ul>
+                </nav>
+
+            </div><!--menu-mobile-->
+            <div class="overlay-menu" id="overlay-menu"></div>
+        </div><!--interface-->
+    </header>
+
+    <main>
+        <section class="topo-do-site">
+            <div class="interface">
+                <div class="flex">
+                    <div class="txt-topo-site">
+                        <h1>CETEP TRANSFORMANDO SONHOS EM REALIDADE<span>.</span></h1>
+                        <p>O CETEP Bacia do Rio Grande é uma instituição de ensino médio técnico que oferece cursos
+                            Técnicos Profissionalizantes.
+                            <br>
+                            Atualmente o CETEP-BRG é a maior instituição pública que oferta cursos Técnicos em diversas
+                            áreas de conhecimento.
+                        </p>
+
+
+
+
+                        <p>
+
+                            Os cursos que o CETEP-BRG oferece são:
+                        </p>
+                        <p>
+                        <ul style="padding-left: 20px;color:red">
+                            <li>
+
+                                TÉCNICO EM ADMINISTRAÇÃO
+                            </li>
+                            <li>
+                                TÉCNICO EM INFORMÁTICA
+                            </li>
+                            <li>
+
+                                TÉCNICO EM RECURSOS HUMANOS
+                            </li>
+                            <li>
+
+                                TÉCNICO EM AGRONEGÓCIO
+                            </li>
+
+                        </ul>
+                        </p>
+                        <p>
+
+                            Somos uma instituição séria, que atende alunos da cidade de Barreiras-BA e toda a região
+                            Oeste da Bahia.
+                            O CETEP-BRG é uma instituição renomada, que desde sua fundação vem inspirando jovens nas
+                            suas áreas de formação técnica.
+
+                        <p>
+
+                            Todos os anos o CETEP-BRG proporciona para a sociedade Barreirense novos profissionais
+                            formados em diversas áreas do
+                            conhecimento e do saber.
+
+
+
+                            Jovens que saem da escola com vontade de crescer e contribuir para o crescimento sustentável
+                            de sua cidade e da empresa
+                            em que o mesmo venha a desempenhar suas funções.</p>
+                        </p>
+
+
+
+
+                    </div><!--flex-->
+                </div><!--interface-->
+        </section><!--topo-do-site-->
+
+        <section class="portfolio">
+            <div class="interface">
+                <h2 class="titulo">MEU <span>INFORMAÇÕES</span></h2>
+                <div class="flex ">
+                    <div class="img-port" style="background-image: url(src/img/foto01.png);">
+                        <div class="overlay">INFORMÁTICA</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(src/img/foto02.png);">
+                        <div class="overlay">AGRONEGÓCIO</div>
+                    </div>
+                    <div class="img-port" style="background-image: url(src/img/foto03.png);">
+                        <div class="overlay">RECURSOS HUMANOS</div>
+                    </div>
+                </div><!--flex-->
+            </div><!--interface-->
+            <div class="btn-transformando">
+                <a href="#">
+                    <button>Cadastre-se</button>
+                </a>
+            </div>
+        </section><!--portfolio-->
+
+
+
+
+
+    </main>
+    <footer>
+
+
+        <div class="line-footer borda">
+            <p><i class="bi bi-envelope-fill"></i> <a href="mailto:contato@bruno.com.br">contato@bruno.com.br</a>
+            </p>
+
+
+
+
+            <div class="btn-social">
+                <a href="#"><button><i style=" color: white;" class="bi bi-instagram"></i></button></a>
+                <a href="#"><button><i style=" color: white;" class="bi bi-youtube"></i></button></a>
+                <a href="#"><button><i style=" color: white;" class="bi bi-linkedin"></i></button></a>
+            </div><!--btn-social-->
+
+
+        </div><!--line-footer-->
+        </div><!--interface-->
+    </footer>
+
+</body>
+
+</html>

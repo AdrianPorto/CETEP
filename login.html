@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/css/login.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <script src="src/js/login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+</head>
+
+
+
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAsziaWD4vyx6Rf8P7sOZV94aSjN6Wnhk0",
+        authDomain: "cetep-105e7.firebaseapp.com",
+        projectId: "cetep-105e7",
+        storageBucket: "cetep-105e7.appspot.com",
+        messagingSenderId: "576676451486",
+        appId: "1:576676451486:web:969c466fde5a80d82f578f",
+        measurementId: "G-PNKRTCNN4V",
+    };
+    firebase.initializeApp(firebaseConfig);
+
+
+
+    function login() {
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        alert(emailInput.value)
+        firebase.auth().signInWithEmailAndPassword(
+            emailInput.value, passwordInput.value
+        ).then(response => {
+            window.location.href = "./index.html";
+        }).catch(error => {
+            alert(getErrorMessage(error));
+        });
+    }
+
+</script>
+
+<body>
+    <div class="menu">
+
+
+        <div>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img style=" width: 180px;" src="src/img/logo.png">
+            </div>
+            <div style="margin-bottom: 10px;">E-mail</div>
+            <input class="input" placeholder="email@gmail.com" type="email" id="email">
+            <div style="margin-bottom: 10px; margin-top: 10px;">Senha</div>
+            <input class="input" type="password" placeholder="Senha..." id="password">
+            <div>
+                <button class="btn-menu" onclick="login()">Entrar <i class="bi bi-door-open-fill"></i></button>
+            </div>
+            <div style="margin-top: 10px; text-align: center;">Não possui uma conta? <a href="register.html"
+                    class="cadastro">Cadastre-se</a>
+            </div>
+
+
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

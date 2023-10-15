@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>CETEP - Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="src/css/register.css">
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <script src="src/js/login.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+</head>
+
+
+
+<script>
+    // Configuração do Banco de Dados - Firebase 
+    // Indica qual é o projeto , o dominio, e api para implementar os dados 
+    const firebaseConfig = {
+        apiKey: "AIzaSyAsziaWD4vyx6Rf8P7sOZV94aSjN6Wnhk0",
+        authDomain: "cetep-105e7.firebaseapp.com",
+        projectId: "cetep-105e7",
+        storageBucket: "cetep-105e7.appspot.com",
+        messagingSenderId: "576676451486",
+        appId: "1:576676451486:web:969c466fde5a80d82f578f",
+        measurementId: "G-PNKRTCNN4V",
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+
+
+
+
+
+
+    function registerUser() {
+        var db = firebase.firestore();
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const matricula = document.getElementById('matricula').value;
+        const telefone = document.getElementById('telefone').value;
+
+        try {
+
+            auth.createUserWithEmailAndPassword(email, password)
+                .then(() => {
+
+                    const user = auth.currentUser;
+
+                    const user_data = {
+                        email: email,
+                        matricula: matricula,
+                        telefone: telefone,
+                        last_login: Date.now()
+                    };
+
+
+                    const userCollection = db.collection('users');
+                    const userData = {
+                        email: email,
+                        matricula: matricula,
+                        telefone: telefone,
+                        last_login: Date.now()
+                    };
+                    userCollection.add(userData)
+                        .then(() => {
+                            window.location.href = "./";
+                        })
+                        .catch((error) => {
+                            console.error('Erro ao adicionar dados do usuário ao Firestore:', error);
+                            alert('Ocorreu um erro ao registrar o usuário.');
+                        });
+
+
+                })
+                .catch((error) => {
+                    console.error('Erro ao registrar o usuário:', error);
+                    alert('Ocorreu um erro ao registrar o usuário.');
+                });
+        } catch (error) {
+            console.error('Erro ao registrar o usuário:', error);
+            alert('Ocorreu um erro ao registrar o usuário.');
+        }
+    }
+
+
+
+
+</script>
+
+
+
+
+
+<body>
+    <div class="menu">
+
+
+        <div>
+
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img style=" width: 180px;" src="src/img/logo.png">
+            </div>
+            <div style="margin-bottom: 10px;">E-mail</div>
+            <input class="input" placeholder="email@gmail.com" type="email" id="email">
+            <div style="margin-bottom: 10px; margin-top: 10px;">Número de matrícula</div>
+            <input class="input" type="text" placeholder="Número da matrícula..." id="matricula">
+            <div style="margin-bottom: 10px; margin-top: 10px;">Telefone</div>
+            <input class="input" type="tel" placeholder="Telefone..." id="telefone">
+            <div style="margin-bottom: 10px; margin-top: 10px;">Senha</div>
+            <input class="input" type="password" placeholder="Senha..." id="password">
+            <div style="margin-bottom: 10px; margin-top: 10px;">Confirme a senha</div>
+            <input class="input" type="password" placeholder="Confirme a senha..." id="confirmpassword">
+            <div>
+                <button class="btn-menu" onclick="registerUser()"> Cadastrar <i class="bi bi-pencil-square"
+                        style="font-size: 16px;"></i></i></button>
+            </div>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
