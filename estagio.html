@@ -9,13 +9,25 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../src/css/estagio.css'>
     <script src='main.js'></script>
 </head>
+<script>
+    function downloadPdf() {
+        const pdfUrl = 'src/estagio.xlsx';
+        const a = document.createElement('a');
+        a.href = pdfUrl;
+        a.download = 'estagio.xlsx';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+    }
+</script>
 
 <body>
     <div id="estagio">
 
         <div id="texto">
-            <div style="top: 30px; left: 100px; position: absolute; color: white;">O que é estágio?</div>
-            <div id="texto" style="top: 100px;">Estágio é uma forma de aquisição de experiência prática em uma
+            <div style="top: 10px; left: 100px; position: absolute; color: white;">O que é estágio?</div>
+            <div id="texto" style="top: 100px; width: 900px;">Estágio é uma forma de aquisição de experiência prática
+                em uma
                 determinada área de trabalho ou
                 profissão. É uma
                 oportunidade oferecida a estudantes ou recém-formados, geralmente com duração definida e supervisionada
@@ -28,31 +40,42 @@
 
             <div style="top: 500px; left: 100px; position: absolute; color: white;">Como preencher a ficha de estágio?
             </div>
-            <div style="top: 550px; left: 100px; position: absolute; color: white;">Segue o tutorial abaixo:
+            <div style="top: 600px; left: 100px; position: absolute; color: white;">Segue o tutorial abaixo:
             </div>
-            <iframe src="https://drive.google.com/file/d/19RZQ9fVdd40ennOEu7_KLh2alnPDqmBr/preview" width="800" style="top: 650px; position: absolute; left: 220px; border-radius: 20px;
+            <iframe src="https://drive.google.com/file/d/19RZQ9fVdd40ennOEu7_KLh2alnPDqmBr/preview" width="890" style="top: 670px; position: absolute; left: 100px; border-radius: 20px;
                 border: 0;" height="520" allow="autoplay"></iframe>
 
             <div style="top: 550px; left: 100px; position: absolute; color: white;">Beneficios do Estágio:
 
             </div>
-            <div>
-                <li>
-
-                    >Experiência prática: Os estagiários têm a oportunidade de aplicar o conhecimento adquirido na sala
+            <div style="top: 1200px; left: 70px; width: 930px;  position: absolute; text-align: justify; ">
+                <ul>
+                    Experiência prática: Os estagiários têm a oportunidade de aplicar o conhecimento adquirido na sala
                     de aula em um ambiente de trabalho real. Isso ajuda a solidificar o aprendizado teórico e a
                     desenvolver habilidades
-                    práticas.</li>
+                    práticas.
+                </ul>
                 <div>
-                    Desenvolvimento de habilidades: Os estágios permitem que os estagiários desenvolvam
-                    habilidades específicas relacionadas à sua área de estudo ou carreira, tornando-os mais preparados
-                    para futuros empregos.
+                    <ul>
+                        Desenvolvimento de habilidades: Os estágios permitem que os estagiários desenvolvam
+                        habilidades específicas relacionadas à sua área de estudo ou carreira, tornando-os mais
+                        preparados
+                        para futuros empregos.
+                    </ul>
+
                 </div>
                 <div>
-                    Networking: Os estagiários têm a chance de construir relacionamentos
-                    profissionais valiosos com colegas de trabalho e outros profissionais da indústria. Essas conexões
-                    podem ser úteis para futuras oportunidades de emprego.
+                    <ul>
+                        Networking: Os estagiários têm a chance de construir relacionamentos
+                        profissionais valiosos com colegas de trabalho e outros profissionais da indústria. Essas
+                        conexões
+                        podem ser úteis para futuras oportunidades de emprego.
+                    </ul>
                 </div>
+                <div style="margin-left: 40px;">Baixe aqui a documentação do estágio.</div>
+
+                <button onclick="downloadPdf()">ESTAGIO EM PDF</button>
+
             </div>
         </div>
 
