@@ -22,7 +22,7 @@ html {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(245, 255, 46);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 #topAgro::after {
@@ -42,7 +42,7 @@ html {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(137, 255, 46);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 
@@ -64,7 +64,7 @@ html {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(255, 46, 46);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 
@@ -85,7 +85,7 @@ html {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(245, 255, 46);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 img {
