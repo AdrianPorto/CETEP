@@ -31,7 +31,7 @@
     function login() {
         const emailInput = document.getElementById("email");
         const passwordInput = document.getElementById("password");
-        alert(emailInput.value)
+
         firebase.auth().signInWithEmailAndPassword(
             emailInput.value, passwordInput.value
         ).then(response => {
@@ -44,8 +44,11 @@
 
             window.location.href = "./estagio.html";
         }).catch(error => {
-            alert(getErrorMessage(error));
+
         });
+        if (passwordInput.value.toString().length < 6) {
+            alert("Senha deve possuir 6 caracteres!")
+        }
     }
 
 </script>

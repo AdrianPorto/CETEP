@@ -101,7 +101,7 @@ img {
   opacity: 1;
   z-index: 1;
   width: 1050px;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: justify;
   font-size: 30px;
   font-weight: 600;

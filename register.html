@@ -43,6 +43,7 @@
         var db = firebase.firestore();
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
+
         const matricula = document.getElementById('matricula').value;
         const telefone = document.getElementById('telefone').value;
 
@@ -73,20 +74,22 @@
                             window.location.href = "./";
                         })
                         .catch((error) => {
-                            console.error('Erro ao adicionar dados do usuário ao Firestore:', error);
-                            alert('Ocorreu um erro ao registrar o usuário.');
+
                         });
 
 
                 })
                 .catch((error) => {
-                    console.error('Erro ao registrar o usuário:', error);
-                    alert('Ocorreu um erro ao registrar o usuário.');
+
                 });
         } catch (error) {
-            console.error('Erro ao registrar o usuário:', error);
-            alert('Ocorreu um erro ao registrar o usuário.');
+
         }
+
+        if (password.toString().length < 6) {
+            alert("Senha deve possuir 6 caracteres!")
+        }
+
     }
 
 
