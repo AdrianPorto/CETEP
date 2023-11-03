@@ -16,13 +16,13 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/back1.jpg);
+  background-image: url(../../src/img/back2.jpg);
 }
 #topAdm {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(174, 237, 0);
   z-index: 200;
 }
 #topAgro::after {
@@ -36,13 +36,13 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/back1.jpg);
+  background-image: url(../../src/img/agro.jpg);
 }
 #topAgro {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 255, 21);
   z-index: 200;
 }
 
@@ -57,14 +57,14 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/back1.jpg);
+  background-image: url(../../src/img/foto01.png);
 }
 
 #topInfo {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(244, 1, 1);
   z-index: 200;
 }
 
@@ -79,13 +79,13 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/back1.jpg);
+  background-image: url(../../src/img/back2.jpg);
 }
 #topRec {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(174, 237, 0);
   z-index: 200;
 }
 img {
