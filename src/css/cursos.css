@@ -16,13 +16,12 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/back2.jpg);
 }
 #topAdm {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(174, 237, 0);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 #topAgro::after {
@@ -36,13 +35,12 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/agro.jpg);
 }
 #topAgro {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(0, 255, 21);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 
@@ -57,14 +55,13 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/foto01.png);
 }
 
 #topInfo {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(244, 1, 1);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
 }
 
@@ -79,31 +76,20 @@ html {
   display: flex;
   height: 100vw;
   z-index: 0;
-  background-image: url(../../src/img/back2.jpg);
 }
 #topRec {
   z-index: 10;
   width: 100%;
   height: 70vw;
-  background-color: rgb(174, 237, 0);
+  background-color: rgb(255, 255, 255);
   z-index: 200;
-}
-img {
-  position: absolute;
-  z-index: 1;
-  opacity: 1;
 }
 
 #texto {
-  top: 500px;
-  left: 100px;
-  position: absolute;
-  opacity: 1;
-  z-index: 1;
   width: 1050px;
-  color: rgb(255, 255, 255);
-  text-align: justify;
-  font-size: 30px;
+  color: rgb(0, 0, 0);
+
+  font-size: 50px;
   font-weight: 600;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;

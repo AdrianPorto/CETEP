@@ -147,6 +147,10 @@ header a {
   transition: 0.2s;
 }
 
+header a:hover {
+  text-decoration: underline white;
+}
+
 header nav.menu-desktop a:hover {
   color: black;
   transform: scale(1.05);
@@ -334,8 +338,8 @@ section.sobre .flex {
 }
 
 .btn-social button {
-  width: 60px;
-  height: 60px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   border: none;
   background-color: red;
